@@ -1,0 +1,123 @@
+:root {
+  --color-primary: #d6cfc4;
+
+  --color-on-primary: #5a4f4b;
+  --color-surface: #faf5f0;
+  --color-on-surface: #5a4f4b;
+  --color-surface-container-low: #f5efea;
+  --color-surface-container-highest: #f5efea;
+
+  --font-family-base: Optima, Candara, "Noto Sans", source-sans-pro, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-heading: system-ui, sans-serif;
+  --font-family-monospace: ui-monospace, "Cascadia Code", "Source Code Pro",
+    Menlo, Consolas, "DejaVu Sans Mono", monospace;
+
+  background-color: var(--color-surface);
+  color: var(--color-on-surface);
+}
+
+.font-display-large {
+  font-family: var(--font-family-heading);
+  font-weight: 300;
+  font-size: calc(57 * 0.0625rem);
+  line-height: calc(64 * 0.0625rem);
+}
+
+.font-display-medium {
+  font-family: var(--font-family-heading);
+  font-weight: 300;
+  font-size: calc(45 * 0.0625rem);
+  line-height: calc(52 * 0.0625rem);
+}
+
+.font-display-small {
+  font-family: var(--font-family-heading);
+  font-weight: 300;
+  font-size: calc(45 * 0.0625rem);
+  line-height: calc(52 * 0.0625rem);
+}
+
+.font-headline-large {
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  font-size: calc(32 * 0.0625rem);
+  line-height: calc(40 * 0.0625rem);
+}
+
+.font-headline-medium {
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  font-size: calc(28 * 0.0625rem);
+  line-height: calc(36 * 0.0625rem);
+}
+
+.font-headline-small {
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  font-size: calc(24 * 0.0625rem);
+  line-height: calc(32 * 0.0625rem);
+}
+
+.font-title-large {
+  font-family: var(--font-family-heading);
+  font-weight: 400;
+  font-size: calc(22 * 0.0625rem);
+  line-height: calc(28 * 0.0625rem);
+}
+
+.font-title-medium {
+  font-family: var(--font-family-heading);
+  font-weight: 500;
+  font-size: calc(16 * 0.0625rem);
+  line-height: calc(24 * 0.0625rem);
+}
+
+.font-title-small {
+  font-family: var(--font-family-heading);
+  font-weight: 500;
+  font-size: calc(14 * 0.0625rem);
+  line-height: calc(20 * 0.0625rem);
+}
+
+.font-body-large {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: calc(16 * 0.0625rem);
+  line-height: calc(24 * 0.0625rem);
+}
+
+.font-body-medium {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: calc(14 * 0.0625rem);
+  line-height: calc(20 * 0.0625rem);
+}
+
+.font-body-small {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: calc(12 * 0.0625rem);
+  line-height: calc(16 * 0.0625rem);
+}
+
+.font-label-large {
+  font-family: var(--font-family-base);
+  font-weight: 500;
+  font-size: calc(14 * 0.0625rem);
+  line-height: calc(20 * 0.0625rem);
+}
+
+.font-label-medium {
+  font-family: var(--font-family-base);
+  font-weight: 500;
+  font-size: calc(12 * 0.0625rem);
+  line-height: calc(16 * 0.0625rem);
+}
+
+.font-label-small {
+  font-family: var(--font-family-base);
+  font-weight: 500;
+  font-size: calc(11 * 0.0625rem);
+  line-height: calc(16 * 0.0625rem);
+}

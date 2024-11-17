@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <title>
+      Beauty By Livía &mdash; Bridal Hair and Makeup Artist in Denmark
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Insert Description" />
+    <meta name="keywords" content="hair,makeup,wedding,bride,bridal" />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="theme.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preload" href="/hero-video.webm" as="video" />
+    <link rel="preload" href="/hero-poster.webp" as="image" />
+    <title>Beauty by Livia</title>
+  </head>
+  <body class="page-layout font-body-large">
+    <header
+      class="header full-width glassmorphic"
+      style="--minimum-content-padding: 0rem"
+      aria-labelledby="main-header"
+    >
+      <div class="flex-group flex-group--spread flex-group--align-baseline">
+        <a
+          class="font-headline-large"
+          style="text-decoration: none; color: inherit"
+          id="main-heading"
+          href="#"
+          >Beauty by Livía</a
+        >
+        <nav class="desktop-navigation">
+          <ul class="flex-group font-headline-small">
+            <li><a class="nav-link" href="#about">About Me</a></li>
+            <li>
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#testimonials">Reviews</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="mobile-navigation icon-button"
+          id="mobile-navigation-button"
+        >
+          ≡
+        </button>
+        <dialog class="mobile-navigation-menu" id="mobile-navigation-dialog">
+          <button
+            class="icon-button"
+            style="margin-inline-start: auto"
+            id="close-mobile-navigation-menu"
+          >
+            &#x2715;
+          </button>
+          <p class="font-headline-large">Beauty by Livía</p>
+          <nav>
+            <ul class="font-headline-small">
+              <li><a class="nav-link" href="#about">About Me</a></li>
+              <li>
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#testimonals">Reviews</a>
+              </li>
+              <li>
+                <a
+                  class="nav-link"
+                  href="https://www.instagram.com/beautybyliviab/"
+                  >Visit Instagram</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </dialog>
+        <script>
+          const button = document.getElementById("mobile-navigation-button");
+          const dialog = document.getElementById("mobile-navigation-dialog");
+          const anchors = document.querySelectorAll(
+            ".mobile-navigation-menu a"
+          );
+          const closeButton = document.getElementById(
+            "close-mobile-navigation-menu"
+          );
+          button.onclick = () => dialog.showModal();
+          anchors.forEach((anchor) => {
+            anchor.onclick = () => dialog.close();
+          });
+          closeButton.onclick = () => dialog.close();
+        </script>
+      </div>
+    </header>
+    <main class="full-width grid-flow">
+      <section class="hero-section full" aria-label="Hero section">
+        <video
+          tabindex="-1"
+          class="full"
+          style="object-fit: cover"
+          src="/hero-video.webm"
+          poster="/hero-poster.webp"
+          autoplay
+          loop
+          muted
+        ></video>
+        <div class="overlay">
+          <h1 class="font-display-medium">Beauty by Livía</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <a
+            class="call-to-action"
+            style="margin-block-start: 1rem"
+            href="#contact"
+            >Get in touch</a
+          >
+        </div>
+      </section>
+      <section aria-labelledby="about">
+        <h2 class="font-headline-medium" id="about">About Me</h2>
+        <blockquote>
+          <img
+            style="float: right; max-width: 50%; margin-inline-start: 1rem"
+            src="Livia.webp"
+          />
+          <p>
+            My name is Livía Beatriz, I embarked on my journey in the beauty
+            industry at the age of 18 years old. Over the past decade, I've
+            dedicated myself to the artistry of hair and makeup.
+          </p>
+          <p>
+            For the past years, I've exclusively devoted my skills to making
+            wedding days even more special.
+          </p>
+          <cite>Livía</cite>
+        </blockquote>
+      </section>
+      <section
+        class="alt-section full-width grid-flow"
+        aria-labelledby="services"
+      >
+        <h2 class="font-headline-medium" id="services">Services</h2>
+        <p>Some general description of the services offered</p>
+
+        <div
+          class="grid-auto-fit"
+          style="--grid-auto-fit-min-column-size: 400px"
+        >
+          <div class="card grid-flow">
+            <h3 class="font-headline-small">Wedding Hair and Makeup</h3>
+            <p>
+              Here is a small explaination of what the pack consists of and why
+              it is a good proposition
+            </p>
+            <ul>
+              <li>
+                One trial session bridal hair and makeup before the wedding
+              </li>
+              <li>
+                One four hour session with hair and makeup on the day of the
+                wedding
+              </li>
+            </ul>
+            <div class="flex-group flex-group--spread">
+              <div class="font-title-large">4 600 DKK *</div>
+              <a href="#contact" class="call-to-action">Get in touch</a>
+            </div>
+          </div>
+
+          <div class="card grid-flow">
+            <h3 class="font-headline-small">Wedding Hair</h3>
+            <p>
+              Here is a small explaination of what the pack consists of and why
+              it is a good proposition
+            </p>
+            <ul>
+              <li>One trial session bridal hair before the wedding</li>
+              <li>One two hour session with hair on the day of the wedding</li>
+            </ul>
+            <div
+              class="flex-group flex-group--spread"
+              style="margin-block-start: auto"
+            >
+              <div class="font-title-large">3 000 DKK *</div>
+              <a href="#contact" class="call-to-action">Get in touch</a>
+            </div>
+          </div>
+
+          <div class="card grid-flow">
+            <h3 class="font-headline-small">Training course</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              illum consequuntur perspiciatis?
+            </p>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+              <li>Nobis possimus nisi vitae deleniti quos repellendus.</li>
+              <li>Autem ipsum dolor ut modi in eius.</li>
+            </ul>
+            <div
+              class="flex-group flex-group--spread"
+              style="margin-block-start: auto"
+            >
+              <div class="font-title-large">4 000 DKK *</div>
+              <a href="#contact" class="call-to-action">Get in touch</a>
+            </div>
+          </div>
+
+          <div class="card grid-flow">
+            <h3 class="font-headline-small">Service pack 4</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+              illum consequuntur perspiciatis?
+            </p>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+              <li>Nobis possimus nisi vitae deleniti quos repellendus.</li>
+              <li>Autem ipsum dolor ut modi in eius.</li>
+            </ul>
+            <div
+              class="flex-group flex-group--spread"
+              style="margin-block-start: auto"
+            >
+              <div class="font-title-large">4 000 DKK *</div>
+              <a href="#contact" class="call-to-action">Get in touch</a>
+            </div>
+          </div>
+        </div>
+        <details>
+          <summary>
+            <h3 class="font-title-large" style="display: inline">
+              Full price table
+            </h3>
+          </summary>
+          <div
+            class="page-layout font-body-medium"
+            style="--minimum-content-padding: 0rem"
+          >
+            <div class="card narrow">
+              <h4 class="font-title-medium">Wedding 2025</h4>
+              <table style="width: 100%">
+                <tbody>
+                  <tr>
+                    <td>Bridal hair and makeup, 4 hour resevation</td>
+                    <td style="text-align: end">3000 DKK *</td>
+                  </tr>
+                  <tr>
+                    <td>Bridal hair and makeup, 2 hour resevation</td>
+                    <td style="text-align: end">2000 DKK *</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4 class="font-title-medium">Trial</h4>
+              <table style="width: 100%">
+                <tbody>
+                  <tr>
+                    <td>Bridal hair and makeup</td>
+                    <td style="text-align: end">1600 DKK *</td>
+                  </tr>
+                  <tr>
+                    <td>Bridal hair or makeup only</td>
+                    <td style="text-align: end">1000 DKK *</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4 class="font-title-medium">Retouch</h4>
+              <table style="width: 100%">
+                <tbody>
+                  <tr>
+                    <td>Retouch after the ceremony</td>
+                    <td style="text-align: end">1000 DKK *</td>
+                  </tr>
+                  <tr>
+                    <td>Retouch after the during the day for 3 hours</td>
+                    <td style="text-align: end">1500 DKK *</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h4 class="font-title-medium">Guest hair and makeup</h4>
+              <table style="width: 100%">
+                <tbody>
+                  <tr>
+                    <td>Guest hair and makeup</td>
+                    <td style="text-align: end">1500 DKK *</td>
+                  </tr>
+                  <tr>
+                    <td>Guest hair or makeup</td>
+                    <td style="text-align: end">700 DKK *</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </details>
+        <p class="font-body-small">* Prices excludes travel fee</p>
+      </section>
+      <section class="full-width" aria-labelledby="portfolio">
+        <h2 class="font-headline-medium" id="portfolio">Portfolio</h2>
+        <div class="full-width" style="--minimum-content-padding: 0">
+          <div class="popout portfolio" id="portfolio-content"></div>
+        </div>
+        <p>
+          Find more of my work by visiting my
+          <a href="https://www.instagram.com/beautybyliviab/">Instagram</a>
+        </p>
+      </section>
+      <section aria-labelledby="testimonials">
+        <h2 class="font-headline-medium" id="testimonials">Reviews</h2>
+        <div class="testimonials card" id="testimonials-content"></div>
+      </section>
+      <section class="full-width" aria-labelledby="contact">
+        <h2 class="font-headline-medium" id="contact">Contact</h2>
+        <form class="card narrow grid-flow" action="/" method="get">
+          <div>
+            <label class="font-label-large" style="display: block" for="name"
+              >Name *</label
+            >
+            <input
+              class="input"
+              id="name"
+              name="name"
+              autocomplete="name"
+              required
+              type="text"
+            />
+          </div>
+          <div>
+            <label class="font-label-large" style="display: block" for="email"
+              >Email *</label
+            >
+            <input
+              class="input"
+              id="email"
+              name="email"
+              autocomplete="email"
+              type="email"
+              required
+            />
+          </div>
+          <div>
+            <label class="font-label-large" style="display: block" for="phone"
+              >Phone *</label
+            >
+            <input
+              name="phone"
+              class="input"
+              id="phone"
+              required
+              autocomplete="tel"
+              type="tel"
+            />
+          </div>
+          <div>
+            <fieldset>
+              <legend>I want to talk about...</legend>
+              <div class="grid-flow">
+                <div>
+                  <input
+                    type="radio"
+                    name="subject"
+                    id="subject-wedding"
+                    value="Wedding"
+                  />
+                  <label for="subject-wedding">Weddings</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="subject"
+                    id="subject-course"
+                    value="Course"
+                  />
+                  <label for="subject-course">Courses</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    name="subject"
+                    id="subject-other"
+                    value="Other"
+                  />
+                  <label for="subject-other">Something else</label>
+                  <input type="text" class="input" />
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div>
+            <label class="font-label-large" style="display: block" for="message"
+              >Message *</label
+            >
+            <textarea
+              name="message"
+              class="input"
+              id="message"
+              required
+            ></textarea>
+          </div>
+          <div>
+            <input
+              name="privacy-policy"
+              id="privacy-policy"
+              type="checkbox"
+              required
+            />
+            <label class="font-label-large" for="privacy-policy">
+              I have read and agree to the terms in the
+              <a href="#">privacy policy</a> *
+            </label>
+          </div>
+          <button
+            class="call-to-action"
+            style="--call-to-action-background-color: #d9bfb5"
+            type="submit"
+          >
+            Send
+          </button>
+        </form>
+      </section>
+    </main>
+    <footer class="full-width footer">
+      <div style="display: grid; grid-template-columns: repeat(2, 1fr)">
+        <section>
+          <h2 class="font-title-large">Links</h2>
+          <ul style="list-style: none; padding: 0">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li>
+              <a href="https://www.instagram.com/beautybyliviab/">
+                @beautybyliviab
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="font-title-large">Contact</h2>
+          <div>Beauty Artist</div>
+          <div>Livía Beatriz</div>
+          <div>
+            CVR
+            <a href="https://datacvr.virk.dk/enhed/virksomhed/44707667"
+              >44707667</a
+            >
+          </div>
+          <div>Phone <a href="tel:+4512233445">+45 12 23 34 45</a></div>
+          <div>
+            E-mail
+            <a href="mailto:contact@beautybylivia.dk"
+              >contact@beautybylivia.dk</a
+            >
+          </div>
+          <div>
+            Instagram
+            <a href="https://www.instagram.com/beautybyliviab/">
+              @beautybyliviab
+            </a>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+    <script type="module" src="src/main.ts"></script>
+  </body>
+</html>

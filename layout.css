@@ -1,0 +1,138 @@
+.page-layout > *,
+.full-width > * {
+  grid-column: content;
+}
+.page-layout,
+.full-width {
+  --minimum-content-padding: 2rem;
+
+  /** TRACK WIDTHS **/
+  --full-max-width: 1fr;
+  --popout-max-width: 1200px;
+  --content-max-width: 960px;
+  --narrow-max-width: 760px;
+
+  /** TRACK SIZES **/
+  --full: minmax(var(--minimum-content-padding), 1fr);
+  --popout: minmax(
+    0,
+    calc((var(--popout-max-width) - var(--content-max-width)) * 0.5)
+  );
+  --content: minmax(
+    0,
+    calc((var(--content-max-width) - var(--narrow-max-width)) * 0.5)
+  );
+  --narrow: min(
+    var(--narrow-max-width),
+    100% - var(--minimum-content-padding) * 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-start]
+    var(--full)
+    [popout-start]
+    var(--popout)
+    [content-start]
+    var(--content)
+    [narrow-start]
+    var(--narrow)
+    [narrow-end]
+    var(--content)
+    [content-end]
+    var(--popout)
+    [popout-end]
+    var(--full)
+    [full-end];
+}
+
+/** CLASSES **/
+.full {
+  grid-column: full;
+}
+.full-start {
+  grid-column-start: full-start;
+}
+.full-end {
+  grid-column-end: full-end;
+}
+
+.popout {
+  grid-column: popout;
+}
+.popout-start {
+  grid-column-start: popout-start;
+}
+.popout-end {
+  grid-column-end: popout-end;
+}
+
+.content {
+  grid-column: content;
+}
+.content-start {
+  grid-column-start: content-start;
+}
+.content-end {
+  grid-column-end: content-end;
+}
+
+.narrow {
+  grid-column: narrow;
+}
+.narrow-start {
+  grid-column-start: narrow-start;
+}
+.narrow-end {
+  grid-column-end: narrow-end;
+}
+
+.full-width {
+  grid-column: full;
+}
+.full-content,
+.full-content-nopad {
+  grid-column: full;
+}
+.full-content {
+  padding-inline: var(--minimum-content-padding);
+}
+
+.grid-auto-fit {
+  --grid-auto-fit-min-column-size: 200px;
+  --grid-auto-fit-gap: 1rem;
+
+  display: grid;
+  gap: var(--grid-auto-fit-gap);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(var(--grid-auto-fit-min-column-size), 100%), 1fr)
+  );
+}
+
+.grid-flow {
+  display: grid;
+  row-gap: 1rem;
+
+  > * {
+    margin-block: 0;
+  }
+}
+
+.flex-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flex-group--align-baseline {
+  align-items: baseline;
+}
+
+.flex-group--spread {
+  justify-content: space-between;
+}
+
+.flex-group--large-gap {
+  gap: 4rem;
+}
