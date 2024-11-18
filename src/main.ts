@@ -19,7 +19,11 @@ function byDateDesc(lhs: Testimonial, rhs: Testimonial) {
   return rhs.date.getTime() - lhs.date.getTime();
 }
 
-if (import.meta.env.BETA) {
+const isBeta = import.meta.env.MODE;
+
+console.log(isBeta);
+
+if (import.meta.env.MODE === "development") {
   const element = document.createElement("div");
   element.className = "card font-body-small";
   element.style.position = "fixed";
