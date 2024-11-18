@@ -19,6 +19,17 @@ function byDateDesc(lhs: Testimonial, rhs: Testimonial) {
   return rhs.date.getTime() - lhs.date.getTime();
 }
 
+if (import.meta.env.BETA) {
+  const element = document.createElement("div");
+  element.className = "card font-body-small";
+  element.style.position = "fixed";
+  element.style.bottom = "0";
+  element.style.left = "0";
+  element.style.right = "0";
+  element.textContent = "This is a beta site, none of the offers are binding";
+  document.body.appendChild(element);
+}
+
 const testimonials: Testimonial[] = [
   {
     name: "Hawa",
